@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OUYA游戏机官方导航与资源中心。提供OUYA游戏下载、固件升级、硬件评测及复古掌机改造指南，涵盖Android平台独立游戏与经典复古体验。">
+    <meta name="keywords" content="ouya游戏机,OUYA,安卓游戏机,复古游戏,独立游戏开发,游戏机评测">
+    <title>OUYA游戏机-复古安卓游戏机硬件评测与资源下载</title>
+    <style>
+        :root {
+            --primary: #e67e22;
+            --primary-dark: #d35400;
+            --bg-dark: #1a1a1a;
+            --bg-card: #2c2c2c;
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --accent: #2ecc71;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/ouya/1920/1080.jpg') no-repeat center center/cover;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-primary:hover, .btn-outline:hover {
+            opacity: 0.9;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Game Showcase */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #444;
+        }
+
+        .game-info {
+            padding: 20px;
+        }
+
+        .game-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .game-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .game-tag {
+            background-color: rgba(230, 126, 34, 0.2);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        /* Hardware Specs Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 15px 25px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+        }
+
+        .specs-table th {
+            background-color: #383838;
+            color: var(--primary);
+            font-weight: 600;
+            width: 30%;
+        }
+
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .specs-table tr:hover {
+            background-color: rgba(255,255,255,0.02);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            background-color: #333;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            display: none;
+            border-top: 1px solid #444;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .specs-table th, .specs-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4"/><path d="M8 10v4"/><path d="M14 10v4"/><path d="M16 12h2"/></svg>
+                <span>OUYA</span> 游戏机
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">核心功能</a></li>
+                    <li><a href="#games">精选游戏</a></li>
+                    <li><a href="#specs">硬件参数</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#download" class="cta-btn">下载固件</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>重新定义安卓掌机体验</h1>
+                <p>OUYA 游戏机是一款专为独立游戏开发者打造的 Android 掌机，拥有独特的摇杆设计、丰富的外设接口以及开放的 SDK，带给你纯正的复古游戏情怀与现代性能的完美结合。</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="window.location.href='#games'">浏览游戏库</button>
+                    <button class="btn btn-outline" onclick="window.location.href='#specs'">查看参数</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">为什么选择 OUYA</h2>
+                    <p class="section-subtitle">专为游戏而生，拒绝冗余功能</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>原生摇杆设计</h3>
+                        <p>独特的十字键与摇杆布局，专为复古街机游戏优化，提供精准的操控手感。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🔌</div>
+                        <h3>丰富外设接口</h3>
+                        <p>配备 HDMI 输出、USB 接口及麦克风接口，不仅限于屏幕，更能连接大屏电视。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>高性能硬件</h3>
+                        <p>搭载 Tegra 3 四核处理器，配合 1GB RAM，流畅运行数百款 Android 独立游戏。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>开发者友好</h3>
+                        <p>完全开源的 Android 平台，鼓励独立开发者创作，拥有庞大的 Mod 社区支持。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="section" style="background-color: #222;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">热门游戏推荐</h2>
+                    <p class="section-subtitle">探索 OUYA 游戏机上的精彩独占与移植佳作</p>
+                </div>
+                <div class="game-grid">
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/ouya1/400/250" alt="游戏封面" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Shadowgun: Deadzone</h3>
+                            <div class="game-meta">
+                                <span class="game-tag">动作射击</span>
+                                <span>4.5 ★</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #999;">多人在线第一人称射击游戏，在掌机上体验爽快的枪战快感。</p>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/ouya2/400/250" alt="游戏封面" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">TowerFall</h3>
+                            <div class="game-meta">
+                                <span class="game-tag">格斗竞技</span>
+                                <span>5.0 ★</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #999;">经典的弓箭格斗游戏，支持本地多人同屏对战，节奏极快。</p>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/ouya3/400/250" alt="游戏封面" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Dead Ahead 2</h3>
+                            <div class="game-meta">
+                                <span class="game-tag">生存冒险</span>
+                                <span>4.2 ★</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #999;">在僵尸横行的末世中驾驶载具突围，策略与反应并重的游戏。</p>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/ouya4/400/250" alt="游戏封面" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Bit.Trip Runner</h3>
+                            <div class="game-meta">
+                                <span class="game-tag">跑酷</span>
+                                <span>4.8 ★</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #999;">节奏感极强的跑酷游戏，配合复古像素风格，极具挑战性。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs Section -->
+        <section id="specs" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">硬件规格参数</h2>
+                    <p class="section-subtitle">了解 OUYA 游戏机的详细配置</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <table class="specs-table">
+                        <tbody>
+                            <tr>
+                                <th>处理器</th>
+                                <td>NVIDIA Tegra 3 四核处理器</td>
+                            </tr>
+                            <tr>
+                                <th>内存</th>
+                                <td>1GB LPDDR2</td>
+                            </tr>
+                            <tr>
+                                <th>存储空间</th>
+                                <td>8GB/16GB eMMC 存储</td>
+                            </tr>
+                            <tr>
+                                <th>显示屏</th>
+                                <td>720p (1280x720) IPS 触摸屏</td>
+                            </tr>
+                            <tr>
+                                <th>操作系统</th>
+                                <td>Android 4.1 (可刷机至更高版本)</td>
+                            </tr>
+                            <tr>
+                                <th>接口</th>
+                                <td>HDMI 1.4, USB 2.0, 3.5mm 音频接口</td>
+                            </tr>
+                            <tr>
+                                <th>电池续航</th>
+                                <td>约 5 小时</td>
+                            </tr>
+                            <tr>
+                                <th>重量</th>
+                                <td>约 280 克</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download/Update Section -->
+        <section id="download" class="section" style="background-color: #222;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">固件与资源下载</h2>
+                    <p class="section-subtitle">保持设备最新状态，获取最佳游戏体验</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" style="text-align: left;">
+                        <h3 style="color: var(--primary);">官方固件更新</h3>
+                        <p style="margin: 10px 0;">下载最新版本的 OUYA 系统固件，修复已知漏洞并优化性能。</p>
+                        <button class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">查看版本历史</button>
+                    </div>
+                    <div class="feature-card" style="text-align: left;">
+                        <h3 style="color: var(--primary);">ADB 工具包</h3>
+                        <p style="margin: 10px 0;">用于连接电脑进行调试、安装 APK 文件或刷入第三方系统。</p>
+                        <button class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">下载工具</button>
+                    </div>
+                    <div class="feature-card" style="text-align: left;">
+                        <h3 style="color: var(--primary);">游戏安装指南</h3>
+                        <p style="margin: 10px 0;">详细的图文教程，教你如何从 U 盘或本地网络安装游戏到机器。</p>
+                        <button class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">阅读教程</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题 (FAQ)</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">OUYA 游戏机现在还支持网络连接吗？ <span>+</span></div>
+                        <div class="faq-answer">OUYA 游戏机支持 Wi-Fi 连接，可以访问 Google Play 商店（需配置网络）以及部分支持 HTTP 的游戏服务器。部分功能可能因网络政策调整而受限。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何刷入第三方系统？ <span>+</span></div>
+                        <div class="faq-answer">刷机有一定风险，建议先查阅相关教程。通常需要通过 ADB 工具进入 Recovery 模式，清除数据并安装新的系统镜像文件。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">OUYA 游戏机可以玩 Steam Link 吗？ <span>+</span></div>
+                        <div class="faq-answer">OUYA 搭载的是 Android 系统，理论上可以安装 Steam Link 应用。但由于硬件性能限制（Tegra 3），在掌机上运行 Steam Link 的流畅度可能不如现代手机。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">外接手柄兼容性如何？ <span>+</span></div>
+                        <div class="faq-answer">OUYA 原生支持蓝牙连接，绝大多数 USB 游戏手柄和蓝牙手柄都可以通过系统设置进行配对使用。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 15px;">
+                        <span>OUYA</span> 游戏机
+                    </div>
+                    <p style="color: #666; font-size: 0.9rem;">专注于复古游戏体验与独立游戏开发的掌机平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>资源导航</h4>
+                    <ul>
+                        <li><a href="#">游戏库</a></li>
+                        <li><a href="#">固件下载</a></li>
+                        <li><a href="#">开发者文档</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持</h4>
+                    <ul>
+                        <li><a href="#">使用指南</a></li>
+                        <li><a href="#">故障排除</a></li>
+                        <li><a href="#">硬件保修</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于</h4>
+                    <ul>
+                        <li><a href="#">OUYA 历史</a></li>
+                        <li><a href="#">独立游戏推荐</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 OUYA Game Console Fan Site. All rights reserved. 本站为粉丝资源整理站点，OUYA 为相关注册商标。
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                const span = item.querySelector('span');
+                span.textContent = parent.classList.contains('active') ? '-' : '+';
+            });
+        });
+    </script>
+</body>
+      </html>
