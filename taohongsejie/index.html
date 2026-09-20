@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="桃红色界 - 探索桃红色调的视觉美学、设计灵感与色彩搭配指南。提供家居、时尚、艺术领域的桃红色应用方案与创意解析。">
+    <meta name="keywords" content="桃红色界, 桃红色, 色彩搭配, 视觉设计, 粉色系, 装饰风格">
+    <title>桃红色界 - 桃红色调视觉美学与色彩搭配指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-pink: #FFB7C5;
+            --dark-pink: #FF69B4;
+            --soft-pink: #FFF0F5;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-body: #FAFAFA;
+            --bg-white: #FFFFFF;
+            --border-radius: 8px;
+            --shadow-sm: 0 2px 8px rgba(255, 183, 197, 0.15);
+            --shadow-md: 0 4px 16px rgba(255, 105, 180, 0.1);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-pink), var(--dark-pink));
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-desc {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(255, 183, 197, 0.1);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark-pink);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--dark-pink);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            padding: 8px 20px;
+            border: 1px solid var(--dark-pink);
+            border-radius: 20px;
+            color: var(--dark-pink);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--dark-pink);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
+            padding: 100px 0 80px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255, 105, 180, 0.1);
+            color: var(--dark-pink);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--dark-pink);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #ff4da6;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover img {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        /* Color Palette Section */
+        .palette-section {
+            background-color: var(--bg-white);
+        }
+
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .color-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-pink);
+        }
+
+        .color-swatch {
+            height: 150px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .color-name {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .color-hex {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            font-family: monospace;
+        }
+
+        /* Application Scenarios */
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .scenario-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--primary-pink);
+        }
+
+        .scenario-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .scenario-title {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .scenario-text {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Design Guide / Articles */
+        .guide-section {
+            background-color: #fff0f5;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .article-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-img {
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .article-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-tag {
+            font-size: 0.75rem;
+            color: var(--dark-pink);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: var(--text-dark);
+        }
+
+        .article-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .read-more {
+            font-size: 0.9rem;
+            color: var(--dark-pink);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 10px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--dark-pink);
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            font-size: 1.5rem;
+            color: var(--primary-pink);
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #aaa;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--primary-pink);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-pink);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .scenarios-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .guide-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand p {
+                margin: 0 auto;
+            }
+            .scenarios-grid {
+                grid-template-columns: 1fr;
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 22H22L12 2Z" fill="#FF69B4"/>
+                    <path d="M12 6L6 18H18L12 6Z" fill="#FFB7C5"/>
+                </svg>
+                <span>桃红色界</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#palette" class="active">色彩库</a></li>
+                    <li><a href="#scenarios">应用场景</a></li>
+                    <li><a href="#guide">设计指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="#guide" class="btn-outline">开始配色</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">视觉美学 · 情感表达</span>
+                    <h1>探索桃红色的温暖与活力</h1>
+                    <p>桃红色介于粉色与红色之间，既保留了粉色的温柔浪漫，又增添了红色的热情与力量。在这里，我们为您解析桃红色的视觉心理与应用美学。</p>
+                    <div class="hero-btns">
+                        <a href="#palette" class="btn-primary">浏览色卡</a>
+                        <a href="#scenarios" class="btn-outline" style="border-color: var(--text-dark); color: var(--text-dark);">应用场景</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/peachpink/600/400.jpg" alt="桃红色美学展示" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette Section -->
+        <section id="palette" class="section palette-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">经典桃红色谱</h2>
+                    <p class="section-desc">精选适合现代设计的桃红色系，从柔和的浅粉到活力的深红。</p>
+                </div>
+                <div class="palette-grid">
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #FFB7C5;"></div>
+                        <div class="color-info">
+                            <div class="color-name">樱花粉</div>
+                            <div class="color-hex">#FFB7C5</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #FF69B4;"></div>
+                        <div class="color-info">
+                            <div class="color-name">热粉红</div>
+                            <div class="color-hex">#FF69B4</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #FFC0CB;"></div>
+                        <div class="color-info">
+                            <div class="color-name">樱花色</div>
+                            <div class="color-hex">#FFC0CB</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #FF1493;"></div>
+                        <div class="color-info">
+                            <div class="color-name">深粉红</div>
+                            <div class="color-hex">#FF1493</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #FF8DA1;"></div>
+                        <div class="color-info">
+                            <div class="color-name">玫瑰粉</div>
+                            <div class="color-hex">#FF8DA1</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #E6A4B4;"></div>
+                        <div class="color-info">
+                            <div class="color-name">蜜桃色</div>
+                            <div class="color-hex">#E6A4B4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scenarios Section -->
+        <section id="scenarios" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">多元应用场景</h2>
+                    <p class="section-desc">了解桃红色在不同领域的设计语言与表达方式。</p>
+                </div>
+                <div class="scenarios-grid">
+                    <div class="scenario-card">
+                        <div class="scenario-icon">🏠</div>
+                        <h3 class="scenario-title">家居装饰</h3>
+                        <p class="scenario-text">在客厅或卧室中使用桃红色软装，可以营造温馨、放松且充满活力的居住氛围。</p>
+                    </div>
+                    <div class="scenario-card">
+                        <div class="scenario-icon">👗</div>
+                        <h3 class="scenario-title">时尚穿搭</h3>
+                        <p class="scenario-text">桃红色是展现女性柔美与自信的经典色彩，适合春夏季节的各类服饰搭配。</p>
+                    </div>
+                    <div class="scenario-card">
+                        <div class="scenario-icon">🎨</div>
+                        <h3 class="scenario-title">品牌视觉</h3>
+                        <p class="scenario-text">在美妆、母婴或生活方式类品牌中，桃红色常被用于传递亲切、健康与时尚的品牌形象。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Guide Section -->
+        <section id="guide" class="section guide-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">设计灵感与指南</h2>
+                    <p class="section-desc">如何正确使用桃红色，以及如何搭配其他颜色。</p>
+                </div>
+                <div class="guide-grid">
+                    <article class="article-card">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/design1/400/300.jpg" alt="配色方案">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-tag">配色理论</span>
+                            <h3 class="article-title">桃红色与白色的极致简约搭配</h3>
+                            <p class="article-excerpt">白色能中和粉色的甜腻感，让桃红色显得更加清爽高级，适合极简主义风格设计。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/design2/400/300.jpg" alt="家居设计">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-tag">室内设计</span>
+                            <h3 class="article-title">桃红色背景墙的装修技巧</h3>
+                            <p class="article-excerpt">大面积使用桃红色墙面时，建议搭配深色木质家具或金属线条，以平衡视觉重心。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/design3/400/300.jpg" alt="UI设计">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-tag">UI/UX</span>
+                            <h3 class="article-title">网页设计中桃红色的运用</h3>
+                            <p class="article-excerpt">在女性导向或生活方式类APP中，使用桃红色作为强调色，能有效提升用户点击率。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/design4/400/300.jpg" alt="时尚">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-tag">时尚潮流</span>
+                            <h3 class="article-title">2024春夏流行色趋势解析</h3>
+                            <p class="article-excerpt">桃红色作为经典流行色之一，在2024年的时尚界依然占据重要地位，展现出复古回潮的趋势。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题解答</h2>
+                    <p class="section-desc">关于桃红色设计与应用的常见疑问。</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">桃红色适合什么肤色？</button>
+                        <div class="faq-answer">
+                            <p>桃红色通常对大多数肤色都很友好。暖色调的皮肤穿上桃红色会显得气色红润，冷色调的皮肤则能中和黄色的色调，显得更加清新。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">桃红色会让房间显得拥挤吗？</button>
+                        <div class="faq-answer">
+                            <p>如果使用面积过大，确实可能造成视觉拥挤。建议作为点缀色（如抱枕、挂画）使用，或者选择低饱和度的浅桃红色，保持空间通透感。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">如何用CSS代码定义桃红色？</button>
+                        <div class="faq-answer">
+                            <p>最常用的定义是 `background-color: #FFB7C5;` 或 `color: hotpink;`。具体选择取决于你想要的深浅程度和风格。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>桃红色界</h2>
+                    <p>致力于分享色彩美学、设计灵感与实用搭配技巧，为您的生活增添一抹温暖的桃红色。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>色彩库</h3>
+                    <ul>
+                        <li><a href="#">经典色卡</a></li>
+                        <li><a href="#">渐变配色</a></li>
+                        <li><a href="#">色值查询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>设计指南</h3>
+                    <ul>
+                        <li><a href="#">家居配色</a></li>
+                        <li><a href="#">时尚穿搭</a></li>
+                        <li><a href="#">品牌VI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li><a href="#">联系合作</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">使用条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 桃红色界. All Rights Reserved. 仅用于演示目的。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                              </html>
