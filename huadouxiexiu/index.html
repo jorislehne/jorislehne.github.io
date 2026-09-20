@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="花都邪修全集阅读，专注都市玄幻修真题材，提供最新章节、剧情解析及人物背景介绍，沉浸式体验都市修仙世界。">
+    <meta name="keywords" content="花都邪修,都市修仙,玄幻小说,在线阅读,小说推荐">
+    <title>花都邪修-都市玄幻修真小说全集在线阅读</title>
+    <style>
+        :root {
+            --primary-color: #8e2de2;
+            --secondary-color: #4a00e0;
+            --accent-color: #ff007f;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --bg-light: #f3f4f6;
+            --card-bg: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            text-shadow: 0 0 8px rgba(255,255,255,0.5);
+        }
+
+        .search-box {
+            display: flex;
+        }
+
+        .search-box input {
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-box button {
+            background: var(--accent-color);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #2b1055, #7597de);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-tags span {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin: 0 5px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Content Area */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .chapter-list {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-item:hover {
+            background-color: #fafafa;
+        }
+
+        .chapter-title {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .chapter-date {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .btn-read {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .character-item {
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .character-avatar {
+            width: 100%;
+            aspect-ratio: 1;
+            background-color: #eee;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+
+        .character-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rank-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            margin-right: 10px;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background: #ffd700; }
+        .rank-list li:nth-child(2) .rank-num { background: #c0c0c0; }
+        .rank-list li:nth-child(3) .rank-num { background: #cd7f32; }
+
+        /* Intro Section */
+        .intro-section {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .intro-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .tags-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: var(--bg-light);
+            color: var(--text-gray);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .character-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chapter-list {
+                padding: 10px;
+            }
+            
+            .chapter-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .chapter-date, .btn-read {
+                text-align: right;
+                width: 100%;
+            }
+
+            .character-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">花都<span>邪修</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">书架</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索书名或章节...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>花都邪修</h1>
+            <p>都市丛林中的隐世强者，以凡人之躯行逆天之事。在光鲜亮丽的都市表象下，探寻修真界的隐秘与真相。</p>
+            <div class="hero-tags">
+                <span>都市修仙</span>
+                <span>热血爽文</span>
+                <span>扮猪吃虎</span>
+                <span>东方玄幻</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-grid">
+            <!-- Left Content -->
+            <div class="content-area">
+                <!-- Book Intro -->
+                <section class="intro-section">
+                    <h2 class="section-title">作品简介</h2>
+                    <div class="intro-content">
+                        <p>《花都邪修》讲述了一个现代都市背景下的修真故事。主角林辰本是都市中一名普通的大学生，因意外获得上古传承，踏入神秘的修真界。在繁华的花都之中，他一边经营着看似平凡的生意，一边运用超凡的力量解决各种棘手的问题。</p>
+                        <p>本书打破了传统修仙小说的套路，将修真元素完美融入现代都市生活。从校园争斗到商战博弈，从家族恩怨到宗门秘辛，林辰凭借一身高深莫测的修为，在花都这片土地上书写属于自己的传奇篇章。他行事不拘一格，手段狠辣却又心怀正义，被世人称为“邪修”，实则是守护一方的隐世强者。</p>
+                    </div>
+                    <div class="tags-row">
+                        <span class="tag">作者：墨染青衣</span>
+                        <span class="tag">状态：连载中</span>
+                        <span class="tag">字数：128万</span>
+                        <span class="tag">推荐：9.2分</span>
+                    </div>
+                </section>
+
+                <!-- Chapters -->
+                <section>
+                    <div class="section-title">
+                        <span>最新章节</span>
+                        <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">查看更多 &rarr;</a>
+                    </div>
+                    <div class="chapter-list">
+                        <div class="chapter-item">
+                            <a href="#" class="chapter-title">第 两千零九十八章 龙之逆鳞</a>
+                            <span class="chapter-date">2023-10-24</span>
+                            <a href="#" class="btn-read">阅读</a>
+                        </div>
+                        <div class="chapter-item">
+                            <a href="#" class="chapter-title">第 两千零九十七章 阴谋破碎</a>
+                            <span class="chapter-date">2023-10-23</span>
+                            <a href="#" class="btn-read">阅读</a>
+                        </div>
+                        <div class="chapter-item">
+                            <a href="#" class="chapter-title">第 两千零九十六章 绝地反击</a>
+                            <span class="chapter-date">2023-10-22</span>
+                            <a href="#" class="btn-read">阅读</a>
+                        </div>
+                        <div class="chapter-item">
+                            <a href="#" class="chapter-title">第 两千零九十五章 真相大白</a>
+                            <span class="chapter-date">2023-10-21</span>
+                            <a href="#" class="btn-read">阅读</a>
+                        </div>
+                        <div class="chapter-item">
+                            <a href="#" class="chapter-title">第 两千零九十四章 暗流涌动</a>
+                            <span class="chapter-date">2023-10-20</span>
+                            <a href="#" class="btn-read">阅读</a>
+                        </div>
+                        <div class="chapter-item">
+                            <a href="#" class="chapter-title">第 两千零九十三章 隐世高人</a>
+                            <span class="chapter-date">2023-10-19</span>
+                            <a href="#" class="btn-read">阅读</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside>
+                <!-- Ranking -->
+                <div class="card">
+                    <h3 class="section-title" style="margin-bottom: 15px; padding-left: 0; border: none;">热门榜单</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <a href="#">花都邪修：都市神医</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <a href="#">花都邪修：重生归来</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <a href="#">花都邪修：至尊归来</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <a href="#">花都邪修：仙帝下山</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <a href="#">花都邪修：绝世高手</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Characters -->
+                <div class="card">
+                    <h3 class="section-title" style="margin-bottom: 15px; padding-left: 0; border: none;">主要人物</h3>
+                    <div class="character-grid">
+                        <div class="character-item">
+                            <div class="character-avatar">
+                                <img src="https://picsum.photos/seed/linchen/100/100" alt="林辰">
+                            </div>
+                            <div>林辰</div>
+                        </div>
+                        <div class="character-item">
+                            <div class="character-avatar">
+                                <img src="https://picsum.photos/seed/yangyue/100/100" alt="叶月">
+                            </div>
+                            <div>叶月</div>
+                        </div>
+                        <div class="character-item">
+                            <div class="character-avatar">
+                                <img src="https://picsum.photos/seed/zhaoxue/100/100" alt="赵雪">
+                            </div>
+                            <div>赵雪</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips -->
+                <div class="card">
+                    <h3 class="section-title" style="margin-bottom: 15px; padding-left: 0; border: none;">阅读指南</h3>
+                    <ul style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.8;">
+                        <li>• 请支持正版阅读，支持作者创作。</li>
+                        <li>• 本书纯属虚构，请勿模仿修真手段。</li>
+                        <li>• 推荐使用 Chrome 或 Edge 浏览器阅读。</li>
+                        <li>• 如遇卡顿，请刷新页面或清除缓存。</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">加入书架</a>
+            </div>
+            <p class="copyright">Copyright © 2023 花都邪修阅读网 All Rights Reserved.</p>
+            <p class="copyright" style="margin-top: 10px; font-size: 0.75rem; color: #4b5563;">本站内容仅供学习交流，不代表本站立场。</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                          </html>
