@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冲浪指南 - 探索海洋冲浪运动的全攻略。从冲浪基础知识、装备选择、安全注意事项到全球最佳冲浪圣地推荐，为您提供专业的冲浪入门与进阶指导。">
+    <meta name="keywords" content="冲浪, 冲浪运动, 冲浪入门, 冲浪装备, 冲浪教学, 海洋运动">
+    <title>冲浪 - 专业冲浪运动入门与全球胜地指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #006994;
+            --secondary-color: #00a8e8;
+            --accent-color: #ff9f1c;
+            --text-dark: #2c3e50;
+            --text-light: #ecf0f1;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,105,148,0.9), rgba(0,168,232,0.8)), url('https://picsum.photos/seed/surfing/1920/1080.jpg') center/cover no-repeat;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #7f8c8d;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Surfing Guide Section */
+        .guide-section {
+            background-color: var(--bg-white);
+            padding: 60px 0;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .guide-steps ol {
+            counter-reset: step-counter;
+        }
+
+        .guide-steps li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 30px;
+        }
+
+        .guide-steps li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+        }
+
+        .guide-steps h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .guide-steps p {
+            color: #57606f;
+            margin-bottom: 20px;
+        }
+
+        .guide-image {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .guide-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .guide-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Spots Section */
+        .spots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .spot-card {
+            position: relative;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .spot-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .spot-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .spot-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .spot-card:hover .spot-overlay {
+            background: linear-gradient(to top, rgba(0,105,148,0.9), transparent);
+        }
+
+        .spot-location {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+
+        .spot-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        /* Safety Tips */
+        .safety-section {
+            background-color: #eaf4fc;
+            padding: 60px 0;
+            margin-top: 80px;
+        }
+
+        .safety-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .safety-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .safety-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #ff6b6b;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .safety-item h4 {
+            color: #c0392b;
+            margin-bottom: 5px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: #57606f;
+            display: none;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Surf<span>Guide</span></a>
+            <nav class="nav-links">
+                <a href="#basics">基础知识</a>
+                <a href="#gear">装备选购</a>
+                <a href="#spots">全球胜地</a>
+                <a href="#safety">安全须知</a>
+            </nav>
+            <a href="#spots" class="cta-button">寻找浪点</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>驾驭浪潮，探索自由</h1>
+            <p>无论您是初涉海洋的新手，还是寻求挑战的资深冲浪者，这里都有您需要的专业指南、装备建议和全球浪点推荐。</p>
+            <div class="hero-buttons">
+                <a href="#basics" class="cta-button">开始冲浪</a>
+                <a href="#spots" class="btn-outline">探索浪点</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Why Surf -->
+        <section class="section-title">
+            <h2>为什么选择冲浪？</h2>
+            <p>冲浪不仅是运动，更是一种与海洋对话的生活方式。</p>
+        </section>
+
+        <div class="features-grid">
+            <article class="feature-card">
+                <span class="feature-icon">🌊</span>
+                <h3>强身健体</h3>
+                <p>冲浪是一项全身性运动，能显著提升核心力量、平衡能力以及心肺耐力，同时锻炼肌肉线条。</p>
+            </article>
+            <article class="feature-card">
+                <span class="feature-icon">🧘</span>
+                <h3>心理疗愈</h3>
+                <p>置身于自然之中，感受海浪的律动，有助于释放压力，提升专注力，获得内心的平静。</p>
+            </article>
+            <article class="feature-card">
+                <span class="feature-icon">🌍</span>
+                <h3>探索世界</h3>
+                <p>冲浪让你有机会探索地球上最美丽的海岸线，结识来自世界各地的冲浪爱好者。</p>
+            </article>
+        </div>
+
+        <!-- Guide Section -->
+        <section id="basics" class="guide-section">
+            <div class="section-title">
+                <h2>冲浪入门指南</h2>
+                <p>从零开始，掌握冲浪的基本流程与技巧。</p>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-steps">
+                    <h3>冲浪学习四步走</h3>
+                    <ol>
+                        <li>
+                            <h4>安全评估与观察</h4>
+                            <p>在下水前，务必观察浪况、潮汐和洋流。寻找适合初学者的平缓浪区，避免在礁石或强流区域活动。</p>
+                        </li>
+                        <li>
+                            <h4>装备选择与穿戴</h4>
+                            <p>根据体重和身高选择合适的冲浪板（初学者建议使用长板以增加浮力）。穿戴防滑鞋、防晒霜和潜水服。</p>
+                        </li>
+                        <li>
+                            <h4>划水与起乘</h4>
+                            <p>从后方划水，寻找合适的浪头。当浪卷过头顶时，快速起身，将冲浪板置于胸前，调整重心以保持平衡。</p>
+                        </li>
+                        <li>
+                            <h4>滑行与转向</h4>
+                            <p>保持膝盖微曲，重心前移。利用脚尖或脚跟的轻微施力来控制冲浪板的转向。</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="guide-image">
+                    <img src="https://picsum.photos/seed/surfing1/600/400.jpg" alt="冲浪初学者教学示意图">
+                </div>
+            </div>
+        </section>
+
+        <!-- Spots Section -->
+        <section id="spots" class="section-title">
+            <h2>全球热门冲浪圣地</h2>
+            <p>无论身在何处，都能找到属于你的那片海。</p>
+        </section>
+
+        <div class="spots-grid">
+            <div class="spot-card">
+                <img src="https://picsum.photos/seed/bali/400/500.jpg" alt="巴厘岛冲浪">
+                <div class="spot-overlay">
+                    <div class="spot-location">印度尼西亚 · 巴厘岛</div>
+                    <div class="spot-name">库塔海滩</div>
+                </div>
+            </div>
+            <div class="spot-card">
+                <img src="https://picsum.photos/seed/hawaii/400/500.jpg" alt="夏威夷冲浪">
+                <div class="spot-overlay">
+                    <div class="spot-location">美国 · 夏威夷</div>
+                    <div class="spot-name">威基基</div>
+                </div>
+            </div>
+            <div class="spot-card">
+                <img src="https://picsum.photos/seed/perth/400/500.jpg" alt="澳大利亚冲浪">
+                <div class="spot-overlay">
+                    <div class="spot-location">澳大利亚 · 珀斯</div>
+                    <div class="spot-name">曼哲拉</div>
+                </div>
+            </div>
+            <div class="spot-card">
+                <img src="https://picsum.photos/seed/peru/400/500.jpg" alt="秘鲁冲浪">
+                <div class="spot-overlay">
+                    <div class="spot-location">秘鲁 · 利马</div>
+                    <div class="spot-name">米拉弗洛雷斯</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Safety Section -->
+        <section id="safety" class="safety-section">
+            <div class="safety-container">
+                <div class="section-title">
+                    <h2>安全与注意事项</h2>
+                </div>
+                <div class="safety-list">
+                    <div class="safety-item">
+                        <h4>🌊 洋流警告</h4>
+                        <p>不要试图逆流横渡，应顺着洋流游出再横渡，或等待洋流减弱。</p>
+                    </div>
+                    <div class="safety-item">
+                        <h4>🦈 海洋生物</h4>
+                        <p>留意水母和鲨鱼。在珊瑚礁区域冲浪时，注意脚下，避免被割伤。</p>
+                    </div>
+                    <div class="safety-item">
+                        <h4>🚑 互助原则</h4>
+                        <p>看到他人遇险，大声呼救并寻求帮助。初学者应结伴而行。</p>
+                    </div>
+                    <div class="safety-item">
+                        <h4>☀️ 防晒与补水</h4>
+                        <p>长时间暴露在户外，务必使用高倍防晒霜并大量补充水分。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-title">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">初学者应该买板还是租板？</div>
+                <div class="faq-answer">建议初学者先在当地冲浪店租赁冲浪板。长板（11-12英尺）浮力大，更容易上手，适合学习基本技巧。等熟练后再考虑购买属于自己的板子。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">冲浪需要多长时间才能学会？</div>
+                <div class="faq-answer">这取决于个人的协调性和练习频率。大多数人在参加2-3天的专业课程后，能够独立站立并滑行几米。掌握基本的起乘技巧通常需要几周时间的反复练习。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">什么季节适合去哪里冲浪？</div>
+                <div class="faq-answer">这取决于目的地。例如，夏威夷在冬季受西风影响浪大，夏季则较平缓。建议在出行前查询当地的浪况预报和季节性潮汐表。</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>SurfGuide</h4>
+                <p>致力于推广冲浪文化，为每一位热爱海洋的朋友提供最实用的资讯与服务。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#basics">入门指南</a></li>
+                    <li><a href="#gear">装备选购</a></li>
+                    <li><a href="#spots">全球浪点</a></li>
+                    <li><a href="#safety">安全须知</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">品牌故事</a></li>
+                    <li><a href="#">联系合作</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 SurfGuide 冲浪指南. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+                              </html>
