@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="妻子秘密免费读全文 - 提供高质量言情小说、都市情感故事在线阅读服务。包含章节目录、精彩试读及更新提醒，支持手机端与PC端流畅阅读体验。">
+    <meta name="keywords" content="妻子秘密免费读全文,妻子秘密,言情小说,在线阅读,免费小说,都市情感">
+    <title>妻子秘密免费读全文 - 经典言情故事与在线阅读平台</title>
+    <style>
+        :root {
+            --primary-color: #d63384; /* 柔和的玫瑰粉，符合言情氛围 */
+            --primary-dark: #a61e4e;
+            --secondary-color: #f8f9fa;
+            --text-main: #2c3e50;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-hover: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: #fff;
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            background: var(--secondary-color);
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            align-items: center;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 200px;
+            font-size: 0.9rem;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fff 100%);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(214, 51, 132, 0.4);
+            background-color: var(--primary-dark);
+        }
+
+        /* 分类导航 */
+        .category-bar {
+            background-color: #fff;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .category-item {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+        }
+
+        .category-item:hover, .category-item.active {
+            color: var(--primary-color);
+            background-color: #fff0f6;
+        }
+
+        /* 内容区 */
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 1.5rem;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* 热门榜单网格 */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .book-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: #fad0d9;
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 280px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(214, 51, 132, 0.9);
+            color: #fff;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+
+        .book-info {
+            padding: 1rem;
+        }
+
+        .book-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .book-author {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+        }
+
+        .book-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+            padding-top: 0.8rem;
+        }
+
+        .read-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .read-btn:hover {
+            background-color: #fad0d9;
+        }
+
+        /* 章节列表 */
+        .chapter-list {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .chapter-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-name {
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .chapter-name:hover {
+            color: var(--primary-color);
+        }
+
+        .chapter-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* 介绍区域 */
+        .intro-section {
+            background-color: #fdf2f8;
+            padding: 3rem;
+            border-radius: var(--radius);
+            margin-bottom: 3rem;
+            border: 1px dashed #f8b0c8;
+        }
+
+        .intro-content h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .intro-content p {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #f8f9fa;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e9ecef;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏导航链接 */
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .book-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .book-cover {
+                height: 220px;
+            }
+
+            .intro-section {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .book-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>阅文馆</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">热门榜</a>
+                <a href="#">最新更新</a>
+                <a href="#">分类书架</a>
+                <a href="#">作者专区</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索书名或作者...">
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="category-bar">
+        <div class="container category-list">
+            <div class="category-item active">全部</div>
+            <div class="category-item">现代言情</div>
+            <div class="category-item">总裁豪门</div>
+            <div class="category-item">都市情感</div>
+            <div class="category-item">虐恋情深</div>
+            <div class="category-item">破镜重圆</div>
+            <div class="category-item">先婚后爱</div>
+        </div>
+    </div>
+
+    <main class="container main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>妻子的秘密免费读全文</h1>
+            <p>探索一段错综复杂的婚姻关系，揭开隐藏在平静生活背后的惊人真相。点击下方按钮立即阅读完整故事，体验极致的情感纠葛。</p>
+            <a href="#book-list" class="cta-button">开始阅读</a>
+        </section>
+
+        <!-- 小说介绍 -->
+        <section class="intro-section">
+            <div class="intro-content">
+                <h3>关于《妻子的秘密》</h3>
+                <p>这是一部备受期待的都市情感小说。故事讲述了女主角林浅在遭遇家庭变故后，带着对丈夫的误解与怨恨步入婚姻殿堂。随着剧情的发展，层层迷雾逐渐揭开，原来所谓的“秘密”背后，竟隐藏着一段不为人知的深情守护。小说情节跌宕起伏，人物刻画细腻入微，是阅读言情小说的首选佳作。</p>
+                <p><strong>阅读提示：</strong>本站提供正版免费试读及章节目录查询，请支持正版作者创作。</p>
+            </div>
+        </section>
+
+        <!-- 热门推荐列表 -->
+        <section id="book-list">
+            <h2 class="section-title">热门推荐</h2>
+            <div class="book-grid">
+                <!-- Book 1 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/secret1/200/280" alt="小说封面">
+                        <span class="book-tag">热榜</span>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">妻子的秘密</h3>
+                        <p class="book-author">作者：墨染青衣</p>
+                        <div class="book-stats">
+                            <span>128万字</span>
+                            <span>已完结</span>
+                        </div>
+                        <a href="#" class="read-btn">免费阅读</a>
+                    </div>
+                </article>
+
+                <!-- Book 2 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/secret2/200/280" alt="小说封面">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">豪门妻子的秘密</h3>
+                        <p class="book-author">作者：夜未央</p>
+                        <div class="book-stats">
+                            <span>86万字</span>
+                            <span>连载中</span>
+                        </div>
+                        <a href="#" class="read-btn">免费阅读</a>
+                    </div>
+                </article>
+
+                <!-- Book 3 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/secret3/200/280" alt="小说封面">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">爱在秘密花园</h3>
+                        <p class="book-author">作者：云中书</p>
+                        <div class="book-stats">
+                            <span>45万字</span>
+                            <span>已完结</span>
+                        </div>
+                        <a href="#" class="read-btn">免费阅读</a>
+                    </div>
+                </article>
+
+                <!-- Book 4 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/secret4/200/280" alt="小说封面">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">前任的秘密</h3>
+                        <p class="book-author">作者：微凉</p>
+                        <div class="book-stats">
+                            <span>92万字</span>
+                            <span>连载中</span>
+                        </div>
+                        <a href="#" class="read-btn">免费阅读</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 章节列表 -->
+        <section style="margin-top: 4rem;">
+            <h2 class="section-title">《妻子的秘密》最新章节</h2>
+            <div class="chapter-list">
+                <div class="chapter-item">
+                    <a href="#" class="chapter-name">第1024章 尘埃落定</a>
+                    <span class="chapter-date">2小时前</span>
+                </div>
+                <div class="chapter-item">
+                    <a href="#" class="chapter-name">第1023章 最后的告别</a>
+                    <span class="chapter-date">5小时前</span>
+                </div>
+                <div class="chapter-item">
+                    <a href="#" class="chapter-name">第1022章 误会解开</a>
+                    <span class="chapter-date">昨天</span>
+                </div>
+                <div class="chapter-item">
+                    <a href="#" class="chapter-name">第1021章 惊天反转</a>
+                    <span class="chapter-date">昨天</span>
+                </div>
+                <div class="chapter-item">
+                    <a href="#" class="chapter-name">第1020章 深夜的来电</a>
+                    <span class="chapter-date">3天前</span>
+                </div>
+                <div class="chapter-item">
+                    <a href="#" class="chapter-name">第1019章 谁是凶手</a>
+                    <span class="chapter-date">3天前</span>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="#" style="color: var(--primary-color); font-size: 0.9rem;">查看更多章节 &raquo;</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>阅读指南</h4>
+                    <ul>
+                        <li><a href="#">如何阅读</a></li>
+                        <li><a href="#">设备兼容性</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">总裁豪门</a></li>
+                        <li><a href="#">都市言情</a></li>
+                        <li><a href="#">古代言情</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 阅文馆在线阅读平台 版权所有 | 妻子的秘密免费读全文 - 欢迎阅读</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
